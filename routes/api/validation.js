@@ -13,13 +13,13 @@ email: Joi.string().email({ minDomainSegments: 2 }).required().messages({
 }),
 phone: Joi.string()
 .trim()
-.regex(/^(\\()?\\d{3}(\\))?(-|\\s)?\\d{3}(-|\\s)\\d{4}$/)
+.regex(/^(\(\d{3}\)|\d{3})(-|\s|\.)?\d{3}(-|\s|\.)?\d{4}$/)
 .required()
 .messages({
-"string.base": '"phone" should be a type of string',
-"string.empty": '"phone" must contain value',
-"string.pattern.base": '"phone" must be 10 digit number',
-"any.required": '"phone" is a required field',
+"string.base": 'phone should be a type of string',
+"string.empty": 'phone must contain value',
+"string.pattern.base": 'phone must be 10 digit number',
+"any.required": 'phone is a required field',
 }),
 });
 
